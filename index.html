@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/output2.loader.js";
+      var loaderUrl = buildUrl + "/output3.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/output2.data.unityweb",
-        frameworkUrl: buildUrl + "/output2.framework.js.unityweb",
-        codeUrl: buildUrl + "/output2.wasm.unityweb",
+        dataUrl: buildUrl + "/output3.data.unityweb",
+        frameworkUrl: buildUrl + "/output3.framework.js.unityweb",
+        codeUrl: buildUrl + "/output3.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Indri",
         productName: "Word Order",
@@ -118,7 +118,7 @@
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
+                  document.makeFullscreen('unity-container');
                 };
 
               }).catch((message) => {
